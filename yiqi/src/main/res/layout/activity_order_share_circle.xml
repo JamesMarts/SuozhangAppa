@@ -4,23 +4,20 @@
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:background="@color/bg_normal">
-	<include layout="@layout/include_toolbar"/>
-
-	<FrameLayout
-			android:id="@+id/fl_container"
+	<LinearLayout
 			android:layout_width="match_parent"
-			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:layout_height="match_parent">
+		<include layout="@layout/include_toolbar"/>
 
-			android:layout_above="@+id/line"/>
+		<FrameLayout
+				android:id="@+id/fl_container"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
 
-	<View xmlns:android="http://schemas.android.com/apk/res/android"
-		  android:id="@+id/line"
-		  android:layout_width="match_parent"
-		  android:layout_height="0.4dp"
-		  android:layout_above="@+id/radiogroup"
-		  android:background="#c3c3c3">
+				android:layout_above="@+id/line"/>
+	</LinearLayout>
 
-	</View>
 
 	<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
 				android:id="@+id/radiogroup"
@@ -33,7 +30,7 @@
 
 
 		<RadioButton
-				android:id="@+id/rb_home_lottery"
+				android:id="@+id/rb_share_circle"
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_weight="1"
@@ -47,7 +44,8 @@
 				android:textSize="11sp"/>
 
 		<RadioButton
-				android:id="@+id/rb_home_documentary"
+				android:id="@+id/rb_write_circle"
+
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_weight="1"
@@ -61,7 +59,7 @@
 				android:textSize="11sp"/>
 
 		<RadioButton
-				android:id="@+id/rb_home_find"
+				android:id="@+id/rb_mine_circle"
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_weight="1"

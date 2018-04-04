@@ -1,14 +1,35 @@
 package com.yiqi.lottery.feature.find.view;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import com.suozhang.framework.framework.BaseActivity;
 import com.yiqi.lottery.R;
 
-public class WriteCircleActivity extends AppCompatActivity {
+public class WriteCircleActivity extends BaseActivity {
+
+
+    @BindView(R.id.toolbar)
+    Toolbar mToolbar;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_share_circle);
+    protected int attachLayoutRes() {
+        return R.layout.activity_share_circle;
+    }
+
+    @Override
+    protected void initInjector() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initView() {
+        initToolBar(mToolbar,"");
     }
 }
