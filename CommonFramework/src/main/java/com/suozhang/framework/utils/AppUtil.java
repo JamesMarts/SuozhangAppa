@@ -147,7 +147,7 @@ public class AppUtil {
         if (ctx == null || TextUtils.isEmpty(key)) {
             return null;
         }
-        String resultData = null;
+              String resultData = null;
         try {
             PackageManager packageManager = ctx.getPackageManager();
             if (packageManager != null) {
