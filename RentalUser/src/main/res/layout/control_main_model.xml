@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2017. 深圳掌控网络有限公司. All rights reserved.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_model_buttom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/window_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="11dp"
+        android:paddingTop="@dimen/dp_10"
+        android:text="工作"
+
+        android:textColor="@color/text_secondary"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/center_ciecle"
+        android:paddingRight="11dp"
+        android:text="阅读"
+        android:textColor="@color/text_secondary"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/center_ciecle"
+        android:paddingLeft="11dp"
+        android:text="浪漫"
+        android:textColor="@color/text_secondary"
+        android:textSize="18sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/center_ciecle"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/pic_km_circular">
+
+        <RadioButton
+            android:id="@+id/bt_model_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/control_model_left_button_bg"
+            android:button="@null"
+
+            android:clickable="true" />
+
+        <RadioButton
+            android:id="@+id/bt_model_bright"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/control_model_up_button_bg"
+            android:button="@null"
+            android:clickable="true" />
+
+
+        <RadioButton
+            android:id="@+id/bt_model_romantic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/control_model_right_button_bg"
+            android:button="@null"
+            android:clickable="true" />
+
+        <RadioButton
+            android:id="@+id/bt_model_sleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/control_model_down_button_bg"
+            android:button="@null"
+            android:clickable="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/pic_km_centre_circular" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/center_ciecle"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="11dp"
+        android:paddingTop="11dp"
+        android:text="休闲"
+        android:textColor="@color/text_secondary"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_comparison">
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_above="@+id/line" />
+
+    <View xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:layout_above="@+id/radiogroup"
+        android:background="#c3c3c3">
+
+    </View>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primary_comparison"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:id="@+id/rb_home_housing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+
+
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/home_menu_husing"
+            android:gravity="center_horizontal"
+            android:text="房源"
+            android:textColor="@drawable/main_buttom_bar_text_color"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rb_home_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/home_menu_life"
+            android:gravity="center_horizontal"
+            android:text="生活"
+            android:textColor="@drawable/main_buttom_bar_text_color"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rb_home_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/home_menu_control"
+            android:gravity="center_horizontal"
+            android:text="客控"
+            android:textColor="@drawable/main_buttom_bar_text_color"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rb_home_my"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/home_menu_mine"
+            android:gravity="center_horizontal"
+            android:text="我的"
+            android:textColor="@drawable/main_buttom_bar_text_color"
+            android:textSize="12sp" />
+
+
+    </RadioGroup>
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="7dp"
+        android:paddingBottom="8dp"
+        android:background="@color/home_bg_msg"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/ic_lottery_msg_bg" />
+
+        <com.sunfusheng.marqueeview.MarqueeView
+            android:id="@+id/marqueeView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:mvAnimDuration="1000"
+            android:layout_marginLeft="7dp"
+            app:mvInterval="2000"
+            app:mvSingleLine="true"
+            app:mvTextColor="@color/text_primary"
+            app:mvTextSize="13sp" />
+    </LinearLayout>
+</LinearLayout>

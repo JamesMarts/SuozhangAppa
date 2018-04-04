@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017. 深圳掌控网络有限公司. All rights reserved.
+  -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="#f0452a"/>
+            <corners android:radius="5dp" />
+            <size android:height="36dp" android:width="283dp"/>
+        </shape>
+
+    </item>
+    <item  >
+
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <solid android:color="#ff644c"/>
+            <corners android:radius="5dp" />
+            <size android:height="36dp" android:width="283dp"/>
+        </shape>
+    </item>
+
+</selector>

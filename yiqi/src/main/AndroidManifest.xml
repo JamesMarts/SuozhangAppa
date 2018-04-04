@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		  package="com.yiqi.lottery">
+
+	<application
+			android:name=".framework.LotteryApplication"
+			android:allowBackup="true"
+			android:icon="@drawable/icon_logo"
+			android:label="@string/app_name"
+			android:roundIcon="@drawable/icon_logo"
+			android:supportsRtl="true"
+			android:theme="@style/AppTheme">
+		<activity android:name=".feature.home.view.MainActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity android:name=".feature.home.view.SplashActivity"/>
+		<activity android:name=".feature.mine.view.SeetingActivity"/>
+		<activity android:name=".feature.documentary.view.LotteryListActivity"/>
+		<activity android:name=".feature.documentary.view.PersonalInfoActivity"/>
+		<activity android:name=".feature.mine.view.EditNickActivity"/>
+		<activity android:name=".feature.mine.view.RechargeActivity"/>
+		<activity android:name=".feature.mine.view.WithdrawActivity"/>
+		<activity android:name=".feature.mine.view.WithdrawAuthActivity"/>
+		<activity android:name=".feature.mine.view.AccountInfoActivity"/>
+		<activity android:name=".feature.mine.view.BeetingDetailActivity"/>
+		<activity android:name=".feature.mine.view.NumberManageActivity"/>
+		<activity android:name=".feature.mine.view.MessageActivity"/>
+		<activity android:name=".feature.mine.view.VerifiedActivity"/>
+		<activity android:name=".feature.mine.view.WithdrawalAccountSettingActivity"/>
+		<activity android:name=".feature.mine.view.EditPasswordActivity"/>
+		<activity android:name=".feature.mine.view.BettingStationInfoActivity"/>
+		<activity android:name=".feature.mine.view.EditPhoneActivity"/>
+		<activity android:name=".feature.mine.view.AboutActivity"/>
+		<activity android:name=".feature.common.view.LoginActivity"/>
+		<activity android:name=".feature.common.view.RegisterActivity"/>
+		<activity android:name=".feature.common.view.ResetPwdActivity"/>
+		<activity android:name=".feature.documentary.view.adapter.LotteryDetailActivity"/>
+		<activity android:name=".feature.find.view.OrderShareCircleActivity">
+		</activity>
+	</application>
+
+</manifest>

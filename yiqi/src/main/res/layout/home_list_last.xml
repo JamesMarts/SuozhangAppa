@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="wrap_content"
+			  android:background="@color/bg_normal"
+			  android:padding="12dp"
+			  android:orientation="vertical">
+
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="120dp"
+			android:padding="10dp"
+			android:background="@drawable/common_white_bg"
+			android:orientation="vertical"
+	>
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="中奖专栏"
+					android:textStyle="bold"
+					android:layout_marginTop="-5dp"
+					android:layout_centerVertical="true"
+					android:id="@+id/tv_lottery_home_luckynumber"
+					android:textColor="@color/text_secondary"
+					android:textSize="15dp"
+			/>
+
+			<ImageView
+					android:layout_width="wrap_content"
+					android:src="@drawable/ic_lottery_more"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:layout_height="wrap_content"/>
+		</RelativeLayout>
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:gravity="center_vertical"
+				android:layout_height="match_parent">
+
+			<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/ic_lottery_cup"
+			/>
+			<LinearLayout
+					android:layout_width="wrap_content"
+					android:orientation="vertical"
+					android:layout_marginLeft="15dp"
+					android:layout_height="wrap_content">
+				<LinearLayout
+						android:layout_width="wrap_content"
+						android:orientation="horizontal"
+						android:gravity="center_vertical"
+						android:layout_height="wrap_content">
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="1000"
+							android:layout_marginTop="-10dp"
+							android:layout_marginBottom="-9dp"
+							android:textColor="@color/primary_highlight"
+							android:textSize="36sp"
+					/>
+					<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="万大奖"
+							android:layout_marginLeft="6dp"
+							android:textColor="@color/primary_highlight"
+							android:textSize="20sp"
+					/>
+
+				</LinearLayout>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dp"
+						android:text="两追号用户双双中头奖合计超千万"
+						android:textColor="#ff8e6c"
+						android:paddingLeft="3dp"
+						android:textSize="13sp"
+				/>
+			</LinearLayout>
+		</LinearLayout>
+
+
+	</LinearLayout>
+</LinearLayout>

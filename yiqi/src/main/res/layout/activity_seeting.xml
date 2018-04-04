@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:orientation="vertical"
+			  android:background="@color/bg_normal"
+			  android:layout_height="match_parent">
+	<include layout="@layout/include_toolbar"/>
+	<LinearLayout
+			xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:background="@color/primary_comparison"
+			android:orientation="vertical">
+
+		<RelativeLayout
+				android:id="@+id/btn_user_setting_version"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:paddingLeft="19dp"
+				android:paddingRight="17dp">
+
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="版本信息"
+					android:textColor="@color/colorBlack"
+					android:textSize="15dp"/>
+
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="v.10.0"
+					android:textColor="@color/text_secondary"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:textSize="15sp"
+			/>
+		</RelativeLayout>
+
+		<include layout="@layout/common_cut_off_rule"/>
+
+
+		<RelativeLayout
+				android:id="@+id/btn_user_setting_about"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:paddingLeft="19dp"
+				android:paddingRight="17dp">
+
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="关于我们"
+					android:textColor="@color/colorBlack"
+					android:textSize="15dp"/>
+
+			<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:src="@drawable/icon_jinqugengduo"/>
+		</RelativeLayout>
+		<include layout="@layout/common_cut_off_rule"/>
+
+
+		<RelativeLayout
+				android:id="@+id/btn_user_setting_clear"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:paddingLeft="19dp"
+				android:paddingRight="17dp">
+
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="清除缓存"
+					android:textColor="@color/colorBlack"
+					android:textSize="15dp"/>
+
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="11.65M"
+					android:textColor="@color/text_secondary"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:textSize="15sp"
+			/>
+		</RelativeLayout>
+
+	</LinearLayout>
+	<Button
+			android:id="@+id/btn_user_setting_quit"
+			android:layout_width="match_parent"
+			android:layout_marginLeft="12dp"
+			android:layout_marginTop="40dp"
+			android:text="退出登录"
+			android:textSize="15sp"
+			android:textColor="@color/text_secondary"
+			android:background="@drawable/common_white_bg"
+			android:layout_marginRight="12dp"
+			android:layout_height="40dp"/>
+
+</LinearLayout>

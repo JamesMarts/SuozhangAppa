@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/primary_comparison"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <RelativeLayout
+            android:id="@+id/btn_user_head_portrait"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="我的头像"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_user_head_portrait"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_head_portrait_man" />
+        </RelativeLayout>
+
+        <include layout="@layout/common_cut_match_rule" />
+
+        <RelativeLayout
+            android:id="@+id/btn_user_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="昵称"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_user_head_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="9dp"
+                android:drawableRight="@drawable/btn_arrow_right"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <include layout="@layout/common_cut_match_rule" />
+
+        <RelativeLayout
+            android:id="@+id/btn_user_head_gender"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="性别"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_user_head_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="9dp"
+                android:drawableRight="@drawable/btn_arrow_right"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <include layout="@layout/common_cut_match_rule" />
+
+        <RelativeLayout
+            android:id="@+id/btn_user_head_birthday"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="生日"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_user_birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="9dp"
+                android:drawableRight="@drawable/btn_arrow_right"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+        </RelativeLayout>
+        <include layout="@layout/common_cut_match_rule" />
+
+        <RelativeLayout
+            android:id="@+id/btn_user_star"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="星座"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_user_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="9dp"
+                android:drawableRight="@drawable/btn_arrow_right"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

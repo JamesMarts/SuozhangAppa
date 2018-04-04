@@ -1,0 +1,68 @@
+<!--
+  ~ Copyright (c) 2017. 深圳掌控网络有限公司. All rights reserved.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_control_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/primary_highlight"
+        android:gravity="center"
+        android:text="客房控制"
+        android:textColor="@color/primary_comparison"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/view_smart_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include layout="@layout/view_smart_empty" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/view_smart_have_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/window_background"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_top"
+            android:layout_width="match_parent"
+            android:layout_height="137dp" />
+
+        <include layout="@layout/common_cut_match_rule" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tbl_title"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            app:tabBackground="@color/primary_comparison"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/primary_highlight"
+            app:tabIndicatorHeight="2dp"
+            app:tabSelectedTextColor="@color/primary_highlight"
+            app:tabTextColor="@color/div_primary" />
+
+        <include layout="@layout/common_cut_match_rule" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_buttom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</LinearLayout>

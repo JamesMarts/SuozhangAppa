@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/primary_comparison"
+    android:orientation="horizontal">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/rg_type"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <RadioButton
+            android:id="@+id/btn_0"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/common_radio_bg"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="全部方案"
+            android:textColor="@drawable/popup_text_color"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/btn_2"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/common_radio_bg"
+            android:button="@null"
+            android:layout_marginLeft="10dp"
+            android:checked="false"
+            android:gravity="center"
+            android:text="竞彩足球"
+            android:textColor="@drawable/popup_text_color"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/btn_3"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/common_radio_bg"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="center"
+            android:text="竞彩篮球"
+            android:textColor="@drawable/popup_text_color"
+            android:textSize="13sp" />
+    </RadioGroup>
+</LinearLayout>

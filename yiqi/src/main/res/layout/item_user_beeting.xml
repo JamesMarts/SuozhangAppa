@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:background="@color/primary_comparison"
+		android:layout_width="match_parent"
+		android:gravity="center_vertical"
+		android:orientation="vertical"
+		android:layout_height="60dp">
+
+	<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="第2018007期"
+				android:textColor="@color/text_black"
+				android:textSize="15sp"
+		/>
+
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="未开奖"
+				android:textColor="#999999"
+				android:layout_alignParentRight="true"
+				android:textSize="15sp"
+		/>
+
+	</RelativeLayout>
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:orientation="horizontal"
+	>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="已投："
+				android:textColor="#ff999999"
+				android:textSize="13sp"
+		/>
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="03 18 26 00 28 "
+				android:layout_marginLeft="8dp"
+				android:textColor="#ffff5f00"
+				android:textSize="13sp"
+		/>
+	</LinearLayout>
+</LinearLayout>

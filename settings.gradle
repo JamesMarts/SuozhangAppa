@@ -1,0 +1,50 @@
+/*
+ * Copyright (c) 2017. 深圳掌控网络科技有限公司. All rights reserved.
+ */
+
+//编译不同项目，在此修改project=“项目名称”即可，注意重新生成的.iml文件不要添加到SVN版本控制
+def project = ['RentalUser']
+
+initIncludeProject(project)
+
+/**
+ *
+ * 初始化项目，项目主Module及所包含的库,有新增Module或库时，在对应项目后包含进去即可
+ *
+ * @param project 项目主Module名称
+ */
+void initIncludeProject(def projects) {
+    for (def project : projects) {
+
+        //全部
+        if (project == 'All') {
+            include ':CommonFramework', ':SmartAlliance', ':CloudManager',':UmengLibrary', ':UMShareLibrary', ':app', ':QiYi', ':yiqi', ':yiqi',
+                    ':baidumaplibrary',  ':lib_protocol',
+                    ':lib_roomdevice', ':didi_sdk', ':RentalManager',
+                    ':RentalUser', ':BLETestTool',':filter-lib'
+        }
+
+        //蓝牙测试工具
+        if (project == 'BLETestTool') {
+            include ':CommonFramework', ':BLETestTool'
+        }
+        //锁掌云管理
+        if (project == 'CloudManager') {
+            include ':CommonFramework', ':CloudManager', ':lib_protocol', ':lib_roomdevice',':UMShareLibrary'
+        }
+        //锁掌酒店联盟
+        if (project == 'SmartAlliance') {
+            include ':CommonFramework', ':SmartAlliance', ':baidumaplibrary',
+                    ':UmengLibrary', ':didi_sdk'
+        }
+        //出租管理
+        if (project == 'RentalManager') {
+            include ':CommonFramework', ':RentalManager'
+        }
+        //出租管理用户端
+        if (project == 'RentalUser') {
+            include ':CommonFramework', 'yiqi'
+        }
+
+    }
+}

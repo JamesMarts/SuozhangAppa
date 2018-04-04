@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <RelativeLayout
+                android:id="@+id/title_bar"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/primary_highlight">
+
+                <ImageView
+                    android:id="@+id/bt_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:paddingRight="50dp"
+                    android:src="@drawable/ic_navigation" />
+
+                <TextView
+                    android:id="@+id/tv_house_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:textColor="@color/primary_comparison"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingRight="15dp">
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="17dp"
+                        android:id="@+id/cbx_house_collection"
+                        android:button="@drawable/cbx_collection_bg" />
+
+                    <ImageView
+                        android:id="@+id/btn_house_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:src="@drawable/btn_house_more" />
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/my_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary_comparison"
+                    android:orientation="vertical"
+                    android:paddingLeft="17dp"
+                    android:paddingRight="17dp">
+
+                    <TextView
+                        android:id="@+id/tv_house_info_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ellipsize="end"
+                        android:lineSpacingMultiplier="1.2"
+                        android:maxLines="2"
+                        android:text=""
+                        android:textColor="@color/text_primary"
+                        android:textSize="15dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="9dp">
+
+                        <TextView
+                            android:id="@+id/tv_house_info_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13dp" />
+
+                        <TextView
+                            android:id="@+id/tv_house_info_rent_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:background="@drawable/bg_house_show_type_text"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/primary_highlight"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:orientation="horizontal"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="17dp">
+
+                        <TextView
+                            android:id="@+id/tv_house_info_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+
+                            android:textColor="@color/text_red"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="元/月起"
+                            android:textColor="@color/text_red"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/primary_comparison"
+                    android:orientation="vertical"
+                    android:paddingLeft="17dp"
+                    android:paddingRight="17dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="地理位置"
+                        android:textColor="@color/text_primary"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary_comparison"
+                    android:orientation="vertical"
+                    android:paddingBottom="25dp"
+                    android:visibility="visible">
+
+                    <com.amap.api.maps.MapView
+                        android:id="@+id/map_house"
+                        android:layout_width="match_parent"
+                        android:layout_height="185dp"
+                        android:paddingLeft="17dp"
+                        android:paddingRight="17dp"
+                        android:visibility="visible"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="16dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/ic_house_location" />
+
+                            <TextView
+                                android:id="@+id/tv_house_info_address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="15dp"
+                                android:drawablePadding="8dp"
+
+                                android:text=""
+                                android:textColor="@color/text_primary"
+                                android:textSize="17sp" />
+                        </LinearLayout>
+                    </com.amap.api.maps.MapView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/primary_comparison"
+                    android:orientation="vertical"
+                    android:paddingBottom="25dp"
+                    android:paddingLeft="17dp"
+                    android:paddingRight="17dp"
+                    android:paddingTop="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@color/primary_comparison"
+                        android:paddingBottom="18dp"
+                        android:text="房源信息"
+                        android:textColor="@color/text_primary"
+                        android:textSize="17sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="74dp"
+                        android:background="#e2f8f6"
+
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="22dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="户型"
+                                        android:textColor="@color/text_secondary"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_house_info_type"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_centerVertical="true"
+                                        android:gravity="left"
+                                        android:paddingLeft="20dp"
+                                        android:text=""
+                                        android:textColor="@color/text_primary"
+                                        android:textSize="13sp" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="22dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="面积"
+                                        android:textColor="@color/text_secondary"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_house_info_area_m2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:gravity="left"
+                                        android:paddingLeft="20dp"
+                                        android:text=""
+                                        android:textColor="@color/text_primary"
+                                        android:textSize="13sp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="22dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="朝向"
+                                        android:textColor="@color/text_secondary"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_house_info_toward"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_centerVertical="true"
+                                        android:gravity="left"
+                                        android:paddingLeft="20dp"
+                                        android:text=""
+                                        android:textColor="@color/text_primary"
+                                        android:textSize="13sp" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="22dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="楼层"
+                                        android:textColor="@color/text_secondary"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_house_info_floor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:gravity="left"
+                                        android:paddingLeft="20dp"
+                                        android:text=""
+                                        android:textColor="@color/text_primary"
+                                        android:textSize="13sp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <include layout="@layout/common_cut_off_rule" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="147dp"
+                    android:background="@color/primary_comparison"
+                    android:orientation="vertical"
+                    android:paddingBottom="25dp"
+                    android:paddingLeft="17dp"
+                    android:paddingRight="17dp"
+                    android:paddingTop="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@color/primary_comparison"
+
+                        android:text="房间配置"
+                        android:textColor="@color/text_primary"
+                        android:textSize="17sp" />
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_room_configuration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="17dp"
+                        android:paddingTop="25dp" />
+
+                </LinearLayout>
+
+                <include layout="@layout/common_cut_off_rule" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary_comparison"
+                    android:orientation="vertical"
+                    android:paddingBottom="25dp"
+                    android:paddingLeft="17dp"
+                    android:paddingRight="17dp"
+                    android:paddingTop="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@color/primary_comparison"
+
+                        android:paddingBottom="20dp"
+                        android:text="房源概况"
+                        android:textColor="@color/text_primary"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/tv_room_info_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/window_background"
+                        android:lineSpacingMultiplier="1.4"
+                        android:paddingBottom="16dp"
+                        android:paddingLeft="13dp"
+                        android:paddingRight="13dp"
+                        android:paddingTop="16dp"
+                        android:text=""
+                        android:textColor="@color/text_primary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/primary_comparison"
+                    android:drawableLeft="@drawable/ic_near_houses"
+                    android:drawablePadding="11dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="17dp"
+                    android:text="同小区房源"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp" />
+
+                <include layout="@layout/common_cut_off_rule" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_room_near"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_comparison"
+                    android:focusable="false"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingLeft="17dp"
+                    android:paddingRight="17dp" />
+            </LinearLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_connect"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:background="@color/primary_highlight"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="联系房东"
+        android:textColor="@color/primary_comparison"
+        android:textSize="18sp"
+        app:layout_behavior="com.suozhang.rentaluser.common.widget.MyBottomBarBehavior" />
+</android.support.design.widget.CoordinatorLayout>

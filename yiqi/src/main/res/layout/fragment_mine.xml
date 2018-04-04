@@ -1,0 +1,381 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/bg_normal"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_normal"
+        android:orientation="vertical"
+        tools:context="com.yiqi.lottery.feature.mine.view.MineFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/bg_mine_user_center">
+
+
+            <RelativeLayout
+                android:id="@+id/btn_user_info"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_head_circle"
+                android:padding="2dp">
+
+
+                <ImageView
+                    android:id="@+id/iv_user_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_user_edit_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_user_info"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/icon_shuru"
+                android:text="周润发"
+                android:textColor="@color/primary_comparison"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/primary_comparison">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:background="#ffdddddd" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/btn_user_recharge"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="1000.00"
+                        android:textColor="#ff111111"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="可用余额(元)"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:drawableLeft="@drawable/icon_chongzhi"
+                        android:drawablePadding="5dp"
+                        android:text="充值"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_user_withdraw"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="40.00"
+                        android:textColor="#ff111111"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="可提款余额(元)"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:drawableLeft="@drawable/icon_tixian"
+                        android:drawablePadding="5dp"
+                        android:text="提现"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/primary_comparison"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/btn_user_mseeage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/icon_xiaoxi"
+                android:gravity="center_horizontal"
+                android:text="消息中心"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/btn_user_basicinfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/icon_ziliao"
+                android:gravity="center_horizontal"
+                android:text="基础资料"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/btn_user_bind_iphone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/icon_bangding"
+                android:gravity="center_horizontal"
+                android:text="绑定手机"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/btn_user_verified"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/icon_shiming"
+                android:gravity="center_horizontal"
+                android:text="实名认证"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/primary_comparison"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/btn_user_betting_record"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="19dp"
+                android:paddingRight="17dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="投注记录"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_jinqugengduo" />
+            </RelativeLayout>
+
+            <include layout="@layout/common_cut_off_rule" />
+
+
+            <RelativeLayout
+                android:id="@+id/btn_user_tracing_management"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="19dp"
+                android:paddingRight="17dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="追号管理"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_jinqugengduo" />
+            </RelativeLayout>
+            <include layout="@layout/common_cut_off_rule" />
+
+
+            <RelativeLayout
+                android:id="@+id/btn_user_edit_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="19dp"
+                android:paddingRight="17dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="修改密码"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_jinqugengduo" />
+            </RelativeLayout>
+            <include layout="@layout/common_cut_off_rule" />
+
+
+            <RelativeLayout
+                android:id="@+id/btn_user_account_detail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="19dp"
+                android:paddingRight="17dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="账户明细"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_jinqugengduo" />
+            </RelativeLayout>
+
+            <include layout="@layout/common_cut_off_rule" />
+
+
+            <RelativeLayout
+                android:id="@+id/btn_user_withdraw_setting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="19dp"
+                android:paddingRight="17dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="提现账户设置"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_jinqugengduo" />
+            </RelativeLayout>
+
+            <include layout="@layout/common_cut_off_rule" />
+
+
+            <RelativeLayout
+                android:id="@+id/btn_user_betting_setting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="19dp"
+                android:paddingRight="17dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="投注站基本信息"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_jinqugengduo" />
+            </RelativeLayout>
+            <include layout="@layout/common_cut_off_rule" />
+            <RelativeLayout
+                    android:id="@+id/btn_user_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingLeft="19dp"
+                    android:paddingRight="17dp">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="设置"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15dp" />
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_jinqugengduo" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

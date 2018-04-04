@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.suozhang.rentaluser">
+
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- Required -->
+    <permission
+        android:name="com.suozhang.rentaluser.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required -->
+    <uses-permission android:name="com.suozhang.rentaluser.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!--Application-->
+    <application
+        android:name=".framework.RentalUserApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_lanuchar"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 登录过期提示 -->
+        <activity
+            android:name=".feature.login.view.LoginTipsActivity"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.ActivityDialogStyle"
+            tools:ignore="WrongManifestParent">
+            <intent-filter>
+                <action android:name="com.suozhang.rentaluser.intent.action.LOGIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 微博登陆H5页面 -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"
+            tools:ignore="WrongManifestParent" />
+        <!-- 微信支付回掉 -->
+
+        <activity
+            android:name=".common.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            tools:ignore="WrongManifestParent" />
+
+        <!-- 微信 -->
+
+        <activity
+            android:name=".common.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:ignore="WrongManifestParent" />
+
+        <!-- QQ完整版 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            tools:ignore="WrongManifestParent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:ignore="WrongManifestParent" />
+        <!-- 分享编辑页(只有新浪微博精简版，豆瓣人人腾讯微博需要)： -->
+
+        <activity
+            android:name="com.suozhang.umeng.apshare.ShareEntryActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault"
+            tools:ignore="WrongManifestParent" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:ignore="WrongManifestParent">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- 友盟统计 APP_KEY -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="${UMENG_APPKEY}" />
+
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":multiprocess"
+            tools:ignore="WrongManifestParent"
+            tools:node="replace" />
+
+        <!-- 支付宝支付 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 极光推送 接受推送的广播接收器 -->
+        <receiver
+            android:name=".common.jpush.MyReceiver"
+            android:enabled="true"
+            android:exported="false"
+            tools:ignore="WrongManifestParent">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="${applicationId}" /> <!-- 您应用的包名 -->
+            </intent-filter>
+        </receiver>
+        <!--QQ授权界面-->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            tools:ignore="DuplicateActivity,WrongManifestParent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:ignore="DuplicateActivity,WrongManifestParent" />
+        <activity android:name=".feature.home.view.HomeActivity" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="6b1dc55f208e0f6755a3dded1a99a58d" />
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+        <!--城市选择界面-->
+        <activity
+            android:name=".common.widget.citypicker.CityPickerActivity"
+
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!--启动页-->
+        <activity
+            android:name=".feature.home.view.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".feature.user.view.UserInfoActivity" /><!--用户详情界面-->
+        <activity android:name=".feature.rental.view.RentalListActivity" /><!--出租屋列表界面-->
+        <activity android:name=".feature.login.view.LoginActivity" /><!--登陆界面-->
+        <activity android:name=".feature.login.view.RegisterActivity" /><!--注册界面-->
+        <activity android:name=".feature.rental.view.RentMapActivity" /><!--地图选房界面-->
+        <activity android:name=".feature.login.view.DynamicLoginActivity" /><!--动态登陆页面-->
+        <activity android:name=".feature.user.view.EditNickNameActivity" /><!--修改昵称页面-->
+        <activity android:name=".feature.user.view.EditPasswordActivity" /><!--修改密码界面-->
+        <activity android:name=".feature.user.view.SettingActivity" /><!--设置页面-->
+        <activity android:name=".feature.user.view.AccountSafeActivity" /><!--账户安全页面-->
+        <activity android:name=".feature.user.view.ModifyPhoneActivity" /><!--修改手机号页面-->
+        <activity android:name=".feature.user.view.ModifyPasswordActivity" /><!--修改密码页面-->
+        <activity android:name=".feature.user.view.MessageActivity" /><!--我的消息列表页面-->
+        <activity android:name=".feature.user.view.MoreActivity" /><!--更多设置页面-->
+        <activity android:name=".feature.user.view.FeedbackActivity" /><!--意见反馈-->
+        <activity android:name=".feature.user.view.AboutActivity" /><!--关于-->
+        <activity android:name=".feature.user.view.CertificationActivity" /><!--提交认证-->
+        <activity android:name=".feature.user.view.AuthWebActivity" /><!--用户认证web页面-->
+        <activity
+            android:name=".feature.rental.view.SearchActivity"
+            android:windowSoftInputMode="adjustResize" /><!--搜索房间-->
+        <activity android:name=".feature.rental.view.HouseActivity" /><!--房源详情-->
+        <activity android:name=".feature.rental.view.ReportRentActivity" /><!--举报房源-->
+        <activity android:name=".feature.life.view.BillingDetailActivity" /><!--账单详情-->
+        <activity android:name=".feature.life.view.PaymentRecordsActivity" /><!--缴费记录-->
+        <activity android:name=".feature.life.view.MyRoomActivity" /><!--我的房间-->
+        <activity android:name=".feature.life.view.MyContractActivity" /><!--我的联系人-->
+        <activity android:name=".feature.life.view.RepairServiceActivity" /><!--保修服务-->
+        <activity android:name=".feature.life.view.RepairInfoActivity" /><!--保修详情-->
+        <activity android:name=".feature.life.view.SelectRepairTypeActivity" /><!--选择保修类型-->
+        <activity android:name=".feature.life.view.ChooseRepairDateActivity" /><!--报修界面-->
+        <activity android:name=".feature.life.view.ContractInfoActivity" /><!--合同详情-->
+        <activity android:name=".feature.user.view.CollectionActivity" /><!--收藏界面-->
+        <activity android:name=".feature.life.view.LivePeopleActivity" /><!--我的入住人-->
+        <activity android:name=".feature.home.TestActivity" />
+        <activity android:name=".feature.life.view.PaymentInfoActivity" /><!--账单详情-->
+        <activity android:name=".feature.user.view.MessageInfoActivity" /><!--消息类别详情-->
+        <activity android:name=".feature.user.view.adapter.MessageViewActivity"/><!--消息详情-->
+    </application>
+
+</manifest>

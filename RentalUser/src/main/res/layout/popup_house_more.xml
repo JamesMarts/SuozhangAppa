@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="125dp"
+        android:layout_height="100dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/black_rectage"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btn_popup_report"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/btn_house_jubao"
+            android:drawablePadding="15dp"
+            android:gravity="center|center_horizontal"
+            android:text="举报"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp" />
+
+        <include layout="@layout/common_cut_match_rule" />
+
+        <TextView
+            android:id="@+id/btn_popup_share"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/btn_house_share"
+            android:drawablePadding="15dp"
+            android:gravity="center|center_horizontal"
+            android:text="分享"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:app="http://schemas.android.com/apk/res-auto"
+			  xmlns:tools="http://schemas.android.com/tools"
+			  android:layout_width="match_parent"
+			  android:background="@color/bg_normal"
+			  android:layout_height="match_parent"
+			  android:gravity="center_horizontal"
+			  android:orientation="vertical">
+
+	<include layout="@layout/include_toolbar"/>
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_marginLeft="12dp"
+			android:layout_marginRight="12dp"
+			android:layout_marginTop="10dp"
+			android:paddingBottom="27dp"
+			android:background="@drawable/common_white_bg"
+			android:orientation="vertical"
+			android:layout_height="wrap_content">
+		<TextView android:layout_width="match_parent"
+				  android:layout_height="40dp"
+				  android:text="竞彩篮球"
+				  android:gravity="center"
+				  android:textColor="@color/text_primary"
+				  android:textSize="13sp"
+				  android:background="@drawable/documentary_personal_detail"
+
+		/>
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical"
+				android:paddingLeft="13dp"
+				android:paddingRight="12dp"
+				android:paddingBottom="29dp"
+				android:background="@color/primary_comparison"
+		>
+
+
+			<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+
+					android:layout_marginTop="25dp"
+
+					android:orientation="horizontal">
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="发单人："
+						android:textColor="@color/text_secondary"
+						android:textSize="13sp"
+				/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="XXXX店"
+						android:layout_marginLeft="28dp"
+						android:textColor="@color/text_black"
+						android:textSize="13sp"
+				/>
+			</LinearLayout>
+			<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+
+					android:layout_marginTop="17dp"
+
+					android:orientation="horizontal">
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="文字宣言："
+						android:textColor="@color/text_secondary"
+						android:textSize="13sp"
+				/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="跟上这一单机不可失失不再来"
+						android:layout_marginLeft="14dp"
+						android:textColor="@color/text_black"
+						android:textSize="13sp"
+				/>
+			</LinearLayout>
+			<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+
+					android:layout_marginTop="17dp"
+
+					android:orientation="horizontal">
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="方案详情："
+						android:textColor="@color/text_secondary"
+						android:textSize="13sp"
+				/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="天机不可泄露"
+						android:layout_marginLeft="14dp"
+						android:textColor="@color/text_black"
+						android:textSize="13sp"
+				/>
+			</LinearLayout>
+			<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+
+					android:layout_marginTop="17dp"
+
+					android:orientation="horizontal">
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="自购金额："
+						android:textColor="@color/text_secondary"
+						android:textSize="13sp"
+				/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="￥20.00"
+						android:layout_marginLeft="14dp"
+						android:textColor="@color/text_black"
+						android:textSize="13sp"
+				/>
+			</LinearLayout>
+			<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+
+					android:layout_marginTop="17dp"
+
+					android:orientation="horizontal">
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="起购金额："
+						android:textColor="@color/text_secondary"
+						android:textSize="13sp"
+				/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="￥80.00"
+						android:layout_marginLeft="14dp"
+						android:textColor="@color/text_black"
+						android:textSize="13sp"
+				/>
+			</LinearLayout>
+			<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+
+					android:layout_marginTop="17dp"
+
+					android:orientation="horizontal">
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="跟单人数："
+						android:textColor="@color/text_secondary"
+						android:textSize="13sp"
+				/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="1876"
+						android:layout_marginLeft="14dp"
+						android:textColor="@color/text_black"
+						android:textSize="13sp"
+				/>
+			</LinearLayout>
+			<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+
+					android:layout_marginTop="17dp"
+
+					android:orientation="horizontal">
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="过关方式："
+						android:textColor="@color/text_secondary"
+						android:textSize="13sp"
+				/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="文本文本详情内容"
+						android:layout_marginLeft="14dp"
+						android:textColor="@color/text_black"
+						android:textSize="13sp"
+				/>
+			</LinearLayout>
+			<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+
+					android:layout_marginTop="17dp"
+
+					android:orientation="horizontal">
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="截止时间："
+						android:textColor="@color/text_secondary"
+						android:textSize="13sp"
+				/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="2018-01-30 23:59"
+						android:layout_marginLeft="14dp"
+						android:textColor="@color/text_black"
+						android:textSize="13sp"
+				/>
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<RelativeLayout
+				android:layout_width="match_parent"
+
+				android:background="@color/primary_comparison"
+				android:layout_height="wrap_content">
+			<ImageView
+					android:layout_width="10dp"
+					android:layout_centerVertical="true"
+					android:layout_height="20dp"
+
+					android:background="@drawable/documentary_personal_detail_circle_left"/>
+
+			<View android:layout_height="2dp"
+				  android:layout_width="match_parent"
+
+				  android:background="@drawable/common_dotted_line"
+				  android:layout_marginRight="17dp"
+				  android:layout_marginLeft="17dp"
+				  android:layerType="software"
+				  android:layout_centerVertical="true"
+				  android:layout_alignParentTop="true"/>
+			<ImageView
+					android:layout_width="10dp"
+					android:layout_centerVertical="true"
+					android:layout_height="20dp"
+					android:layout_alignParentRight="true"
+					android:background="@drawable/documentary_personal_detail_circle_right"/>
+		</RelativeLayout>
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingLeft="15dp"
+				android:layout_marginTop="20dp"
+
+				android:orientation="horizontal">
+
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="金额：        "
+					android:textColor="@color/text_secondary"
+					android:textSize="13sp"
+			/>
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="￥100.00"
+					android:layout_marginLeft="14dp"
+					android:textColor="@color/text_black"
+					android:textSize="13sp"
+			/>
+		</LinearLayout>
+		<RelativeLayout
+				android:layout_width="match_parent"
+				android:paddingLeft="15dp"
+				android:layout_marginTop="20dp"
+				android:paddingRight="10dp"
+				android:layout_height="wrap_content">
+			<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+
+					android:orientation="horizontal">
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="佣金比例："
+						android:textColor="@color/text_secondary"
+						android:textSize="13sp"
+				/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="8%"
+						android:layout_marginLeft="14dp"
+						android:textColor="@color/text_black"
+						android:textSize="13sp"
+				/>
+			</LinearLayout>
+			<LinearLayout
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:gravity="center_vertical"
+					android:orientation="horizontal">
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="投"
+						android:textColor="@color/text_secondary"
+						android:textSize="13sp"
+				/>
+				<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:paddingLeft="10dp"
+						android:paddingRight="10dp"
+						android:src="@drawable/icon_jian"
+				/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="1"
+						android:textColor="@color/text_black"
+
+						android:textSize="13sp"
+				/>
+				<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:paddingLeft="10dp"
+						android:paddingRight="10dp"
+
+						android:src="@drawable/icon_jia"
+				/>
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="倍"
+						android:textColor="@color/text_black"
+
+						android:textSize="13sp"
+				/>
+			</LinearLayout>
+		</RelativeLayout>
+
+	</LinearLayout>
+	<Button
+			android:id="@+id/btn_withdraw_wx"
+			android:layout_width="120dp"
+			android:layout_marginLeft="12dp"
+			android:layout_marginTop="15dp"
+			android:text="跟一单"
+			android:textSize="15sp"
+			android:textColor="@color/primary_comparison"
+			android:background="@drawable/common_primary_bg"
+			android:layout_marginRight="12dp"
+			android:layout_height="30dp"/>
+</LinearLayout>

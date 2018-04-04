@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/common_white_bg"
+    android:paddingLeft="10dp"
+    android:paddingRight="5dp">
+
+    <ImageView
+        android:id="@+id/iv_lottery_head"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_lottery_foot" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/tv_lottery_level"
+        android:layout_toRightOf="@+id/iv_lottery_head">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大神壹号"
+                android:textColor="#ff002c59"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_lottery_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="7日连红"
+                android:textColor="#ff111111"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="累积带红 : 2109人"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_lottery_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1247人"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/text_secondary"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_lottery_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/documentary_list_other_sign"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#ffffffff"
+        android:textSize="12dp" />
+
+
+</RelativeLayout>

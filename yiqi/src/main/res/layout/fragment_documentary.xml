@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yiqi.lottery.feature.documentary.view.DocumentaryFragment">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:background="@color/primary_highlight"></LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/primary_highlight"
+
+        >
+
+        <TextView
+            android:id="@+id/btn_gendan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:text="跟单大厅"
+            android:textColor="@color/primary_comparison"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/img_xiala"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/btn_gendan"
+            android:src="@drawable/icon_xiala" />
+
+        <TextView
+            android:id="@+id/btn_my_foucs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:text="我的关注"
+            android:visibility="gone"
+            android:textColor="#ffffffff"
+            android:textSize="13dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/primary_comparison"
+        android:paddingLeft="41dp"
+        android:paddingRight="41dp">
+
+        <TextView
+            android:id="@+id/btn_hongdan_lottery_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/icon_lianhongbao"
+            android:gravity="center_horizontal"
+            android:text="红单榜"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/btn_lianhong_lottery_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/icon_lianhongbao"
+            android:gravity="center_horizontal"
+            android:text="连红榜"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/btn_daihong_lottery_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="6dp"
+            android:drawableTop="@drawable/icon_lianhongbao"
+            android:gravity="center_horizontal"
+            android:text="带红榜"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tvtablayout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        app:tabBackground="@color/bg_normal"
+        app:tabIndicatorHeight="1.5dp"
+        app:tabSelectedTextColor="@color/primary_highlight"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        app:tabTextColor="@color/text_secondary" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/tvviewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

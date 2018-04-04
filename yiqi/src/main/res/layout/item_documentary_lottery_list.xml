@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/common_white_bg"
+    android:paddingLeft="10dp"
+    android:paddingRight="5dp">
+
+    <ImageView
+        android:id="@+id/iv_lottery_head"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_lottery_foot" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@+id/iv_lottery_head"
+        android:text="大神壹号"
+        android:textColor="#ff002c59"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_lottery_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/documentary_list_other_sign"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="#ffffffff"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tv_lottery_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/tv_lottery_level"
+        android:text="7日红单"
+        android:textColor="#ff111111"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/tv_lottery_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/tv_lottery_des"
+        android:text="投6单红5"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/text_secondary"
+        android:textSize="13dp" />
+
+
+</RelativeLayout>

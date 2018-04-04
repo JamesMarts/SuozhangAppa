@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_comparison"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="@color/primary_highlight"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/bt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/ic_navigation" />
+
+        <LinearLayout
+            android:id="@+id/btn_rents_search"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="4"
+            android:background="@drawable/rents_search_view_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp">
+
+            <EditText
+                android:id="@+id/edt_serach_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_rents_search"
+                android:drawablePadding="7dp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:hint="区域，地铁，关键字"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_serach_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:paddingRight="15dp"
+            android:text="确定"
+            android:textColor="@color/primary_comparison"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_comparison"
+        android:paddingBottom="9dp"
+        android:paddingLeft="15dp"
+        android:visibility="gone"
+        android:paddingTop="24dp"
+        android:text="热门"
+        android:textColor="@color/text_primary"
+        android:textSize="18sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_hot_search"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+
+        android:background="@color/primary_comparison"
+        android:paddingLeft="15dp" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#c3c3c3" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="9dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="24dp"
+            android:text="历史"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/btn_history_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/btn_history_delete" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_history_none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="暂无搜索记录！"
+        android:textColor="@color/text_secondary"
+        android:textSize="15sp"
+        android:visibility="gone"
+
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_history_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_comparison"
+        android:paddingLeft="15dp" />
+
+</LinearLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        tools:context="com.suozhang.rentaluser.feature.life.view.LifeFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="215dp"
+            android:background="@drawable/bg_life_main"
+            android:orientation="vertical">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="生活"
+                    android:textColor="@color/primary_comparison"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/btn_user_message"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/ic_user_message" />
+
+                    <TextView
+                        android:id="@+id/tv_show_unread_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/bg_user_msg_text"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/primary_comparison"
+                        android:textSize="9sp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/view_no_pay"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_pay_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:text=""
+                        android:textColor="@color/primary_comparison"
+                        android:textSize="43sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-8dp"
+                        android:text="待付房租（元）"
+                        android:textColor="@color/primary_comparison"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_life_payment"
+                    android:layout_width="192dp"
+                    android:layout_height="33dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_life_pay_button"
+                    android:gravity="center"
+                    android:text="我要交租"
+                    android:textColor="@color/primary_comparison"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="31dp"
+                android:id="@+id/view_no_check_in"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/btn_life_need_checkin"
+                    android:layout_width="192dp"
+                    android:layout_height="33dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_life_pay_button"
+                    android:gravity="center"
+                    android:text="我要入住"
+                    android:textColor="@color/primary_comparison"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="13dp"
+                    android:text="你当前还未入住，请先入住"
+                    android:textColor="@color/primary_comparison"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_no_bills"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="31dp"
+                android:visibility="visible">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="12dp"
+
+                    android:drawableTop="@drawable/ic_life_no_zhangdan"
+                    android:text="当前无账单可交~"
+                    android:textColor="@color/primary_comparison"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_life_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:nestedScrollingEnabled="false" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

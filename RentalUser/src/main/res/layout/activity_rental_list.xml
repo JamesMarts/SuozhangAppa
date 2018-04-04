@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:background="@color/primary_highlight"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingRight="15dp">
+
+                <ImageView
+                    android:id="@+id/bt_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_navigation" />
+
+
+                <EditText
+                    android:id="@+id/edt_serach_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="25dp"
+                    android:background="@drawable/rents_search_view_bg"
+                    android:drawableLeft="@drawable/ic_rents_search"
+                    android:drawablePadding="7dp"
+                    android:focusable="false"
+
+                    android:gravity="center_vertical"
+                    android:hint="区域，地铁，关键字"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_secondary"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        />
+    </android.support.design.widget.AppBarLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefesh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.baiiu.filter.DropDownMenu
+            android:id="@+id/dropDownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mFilterContentView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.baiiu.filter.DropDownMenu>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="wrap_content"
+			  android:background="@color/primary_comparison"
+			  android:orientation="vertical">
+
+	<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="80dp"
+			android:gravity="center_vertical"
+			android:paddingLeft="37dp"
+			android:paddingRight="37dp"
+
+
+	>
+
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:drawablePadding="4dp"
+				android:drawableTop="@drawable/ic_lottery_result"
+				android:gravity="center_horizontal"
+				android:text="开奖结果"
+				android:textColor="@color/text_secondary"
+				android:textSize="13sp"
+
+		/>
+
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:layout_centerVertical="true"
+				android:drawablePadding="4dp"
+				android:drawableTop="@drawable/ic_lottery_score"
+				android:gravity="center_horizontal"
+				android:text="比分大厅"
+				android:textColor="@color/text_secondary"
+				android:textSize="13sp"
+
+		/>
+
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:drawablePadding="4dp"
+				android:drawableTop="@drawable/ic_lottery_again"
+				android:gravity="center_horizontal"
+				android:text="跟单大厅"
+				android:textColor="@color/text_secondary"
+				android:textSize="13sp"
+
+		/>
+
+
+	</RelativeLayout>
+
+	<include layout="@layout/common_cut_match_rule"/>
+
+	<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="80dp"
+			android:gravity="center_vertical"
+			android:paddingBottom="16dp"
+			android:paddingLeft="37dp"
+			android:paddingRight="40dp"
+			android:paddingTop="14dp">
+
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:drawableLeft="@drawable/ic_lottery_basketball"
+				android:drawablePadding="9dp"
+				android:gravity="center_vertical"
+				android:text="竞彩足球"
+				android:textColor="@color/text_secondary"
+				android:textSize="13sp"
+
+		/>
+
+
+		<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:drawableLeft="@drawable/ic_lottery_football"
+				android:drawablePadding="9dp"
+				android:gravity="center_vertical"
+				android:text="竞彩篮球"
+				android:textColor="@color/text_secondary"
+				android:textSize="13sp"
+
+		/>
+
+
+	</RelativeLayout>
+
+	<include layout="@layout/common_cut_match_rule"/>
+
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="80dp"
+
+			android:gravity="center_vertical"
+			android:paddingLeft="13dp"
+			android:paddingRight="13dp"
+
+	>
+
+		<TextView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:drawablePadding="6dp"
+				android:drawableTop="@drawable/ic_lottery_win"
+				android:gravity="center_horizontal"
+				android:text="胜负彩"
+				android:textColor="@color/text_secondary"
+				android:textSize="13sp"
+
+		/>
+
+		<TextView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_centerInParent="true"
+				android:layout_weight="1"
+				android:drawablePadding="6dp"
+				android:drawableTop="@drawable/ic_lottery_foot"
+				android:gravity="center_horizontal"
+				android:text="进彩球"
+				android:textColor="@color/text_secondary"
+				android:textSize="13sp"
+
+		/>
+
+		<TextView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_weight="1"
+				android:drawablePadding="6dp"
+				android:drawableTop="@drawable/ic_lottery_nine"
+				android:gravity="center_horizontal"
+				android:text="任选九"
+				android:textColor="@color/text_secondary"
+				android:textSize="13sp"
+
+		/>
+
+		<TextView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_weight="1"
+				android:drawablePadding="6dp"
+				android:drawableTop="@drawable/ic_lottery_six"
+				android:gravity="center_horizontal"
+				android:text="六点半全场"
+				android:textColor="@color/text_secondary"
+				android:textSize="13sp"
+
+		/>
+	</LinearLayout>
+	<ImageView
+			android:id="@+id/iv_lottery_ad"
+			android:layout_width="match_parent"
+			android:scaleType="fitXY"
+			android:layout_height="80dp"/>
+</LinearLayout>

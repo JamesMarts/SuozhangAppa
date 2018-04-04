@@ -1,0 +1,272 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background"
+    android:orientation="vertical"
+    tools:context="com.suozhang.rentaluser.feature.user.UserFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="169dp"
+        android:background="@drawable/bg_user_center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/text_user_center"
+                android:textColor="@color/primary_comparison"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="36dp"
+                android:id="@+id/btn_user_message"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_show_unread_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/ic_user_message" />
+
+                <TextView
+                    android:id="@+id/tv_show_unread_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/bg_user_msg_text"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/primary_comparison"
+                    android:textSize="9sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/btn_user_info"
+            android:layout_width="98dp"
+            android:layout_height="98dp"
+            android:padding="2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_head_circle">
+
+
+            <ImageView
+                android:id="@+id/iv_user_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_head_portrait_man" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="107dp"
+        android:background="@color/primary_comparison"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_user_nick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="14dp"
+            android:text="" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <LinearLayout
+                    android:id="@+id/btn_user_coupons"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center|center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_user_coupons" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="优惠券"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_user_collection"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center|center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_user_collection" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="我的收藏"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1.5dp"
+                android:layout_height="26dp"
+                android:layout_centerInParent="true"
+                android:background="@color/window_background" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/primary_comparison"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/btn_user_certificate"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/sp_12"
+                android:drawableTop="@drawable/ic_user_certificate"
+                android:gravity="center_horizontal"
+                android:text="身份认证"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/btn_user_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/sp_12"
+                android:drawableTop="@drawable/ic_user_order"
+                android:gravity="center_horizontal"
+                android:text="订单"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/btn_user_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/sp_12"
+                android:drawableTop="@drawable/ic_user_account"
+                android:gravity="center_horizontal"
+                android:text="账户与安全"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#c3c3c3">
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/btn_user_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/sp_12"
+                android:drawableTop="@drawable/ic_user_setting"
+                android:gravity="center_horizontal"
+                android:text="系统设置"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/btn_user_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/sp_12"
+                android:drawableTop="@drawable/ic_user_more"
+                android:gravity="center_horizontal"
+                android:text="更多"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity=""
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/sp_12"
+                android:drawableTop="@drawable/ic_user_account"
+                android:gravity="center_horizontal"
+                android:text="账户与安全"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

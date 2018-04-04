@@ -1,0 +1,143 @@
+/*
+ * Copyright (c) 2017. 深圳掌控网络科技有限公司. All rights reserved.
+ */
+apply plugin: 'com.android.application'
+project.ext {
+    tinker = [
+            // bugly热修复是否启用，默认true,
+            // 在开发时，如需使用install run快速调试应用，可设置为false，否则在设置中关闭install run
+            buglyTinkerEnable: true,
+
+            // 是否编译发布包，自动设置编译生成的文件；（直接使用“运行”启动应用时，设置为false,便于当clean项目时清空无用文件）
+            // true:编译后的文件可直接发布（即基线包），生成的文件位于：项目目录/tinker/bakApk/，后期打补丁包，基线包必须位于此目录下
+            // false:编译后的文件只能调试运行，生成的文件位于：项目目录/build/bakApk/
+            buildRelease     : false,
+
+            // 打补丁包时（buildTinkerPatchRelease），指定基线包的位置（{bakPath}/{baseApkDir}/xx.apk）
+            // 打完整release包时（assembleRelease）不要指定，否则导致生成文件名版本号不一致;
+            // 当buildRelease = false 时，此设置无效
+            baseApkDir       : '',
+
+            //打完整发布包时的版本号，每次+1
+            versionCode      : 7,
+            //打完整发布包时的版本名称
+            versionName      : '1.0.7',
+    ]
+}
+
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion//25
+    buildToolsVersion rootProject.ext.android.buildToolsVersion//25.0.2
+    defaultConfig {
+        applicationId "com.suozhang.rentaluser"
+        minSdkVersion 18//18
+        targetSdkVersion rootProject.ext.android.targetSdkVersion//25
+        versionCode tinker.versionCode
+        versionName tinker.versionName
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters "armeabi"//, "x86", "arm64-v8a", "armeabi-v7a", "x86_64"
+        }
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+        // dex突破65535的限制
+        multiDexEnabled true
+
+        //manifest相关占位符处理
+        manifestPlaceholders = [
+                //友盟
+                UMENG_APPKEY : "58df40c7f43e485a36000344",//友盟分享 appKey
+
+                //极光推送
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "451e81ced5bab7a46da6fbee", //JPush上注册的包名对应的appKey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+        sourceSets {
+            main {
+                jniLibs.srcDirs = ['libs']
+            }
+        }
+    }
+
+    //应用签名配置
+    signingConfigs {
+        release {
+            storeFile file("../signkey/SuoZhangAppKey.jks")
+            storePassword "suozhang"
+            keyAlias "suozhangreleasekey"
+            keyPassword "suozhang"
+        }
+    }
+    buildTypes {
+        debug {
+            //debug调试模式，使用发布时一致的签名
+            signingConfig signingConfigs.release
+            //混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled true
+            //移除无用的resources文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), '../CommonFramework/proguard-rules.pro', '../filter-lib/proguard-rules.pro', 'proguard-rules.pro'
+        }
+        release {
+            signingConfig signingConfigs.release
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            //移除无用的resources文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), '../CommonFramework/proguard-rules.pro', '../filter-lib/proguard-rules.pro', 'proguard-rules.pro'
+        }
+    }
+
+
+    flavorDimensions 'versionCode'
+    //多渠道配置
+    productFlavors {
+        suozhang {}//掌控
+        qq {}//腾讯应用宝
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':CommonFramework')
+    implementation project(':UmengLibrary')
+    implementation project(':filter-lib')
+    //ButterKnife 注解框架 在CommonFramework公共库中已引入，子module需要再次添加注解处理，否则不会自动生成代码
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    //Dagger IoC注入框架 在CommonFramework公共库中已引入，子module需要再次添加注解处理，否则不会自动生成代码
+    annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
+    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+    //LeakCanary内存泄露检测
+    debugImplementation rootProject.ext.dependencies["leakcanary-android"]
+    releaseImplementation rootProject.ext.dependencies["leakcanary-android-no-op"]
+    //极光推送
+    implementation rootProject.ext.dependencies["jpush"]
+    implementation rootProject.ext.dependencies["jpush-jcore"]
+    //3D地图so及jar
+    implementation 'com.amap.api:3dmap:5.6.0'
+    //定位功能
+    implementation 'com.amap.api:location:3.8.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.9'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-1'//没有使用特殊Header，可以不加这行
+    implementation files('libs/alipaySdk-20170309.jar')
+    implementation 'com.larswerkman:HoloColorPicker:1.5'
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
+}
+// 依赖tinker插件脚本
+apply from: '../tinker-support.gradle'

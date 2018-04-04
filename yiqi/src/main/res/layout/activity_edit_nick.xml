@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_normal"
+    tools:context=".feature.mine.view.EditNickActivity">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="?attr/colorPrimary"
+
+        android:minHeight="44dp"
+        app:navigationIcon="@drawable/ic_navigation"
+
+        app:popupTheme="@style/BaseToolbarPopupMenuTheme"
+
+        app:theme="@style/BaseToolbarTheme"
+        app:title="标题"
+        app:titleTextAppearance="@style/BaseToolbarTitleTextAppearance">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="80dp"
+                android:text="修改昵称"
+                android:textColor="@color/primary_comparison"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+
+                android:background="@drawable/user_edit_bg"
+                android:gravity="center"
+                android:text="保存"
+                android:textColor="@color/primary_comparison"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <com.suozhang.framework.widget.PowerfulEditText
+        android:id="@+id/edt_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="37dp"
+        android:paddingBottom="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/transparent"
+        android:hint="请输入昵称"
+        android:paddingLeft="5dp"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        app:funcType="canClear" />
+
+    <include layout="@layout/common_cut_off_rule" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:text="好名字让别人更加容易记住你。"
+        android:textColor="#ff999999"
+        android:textSize="12sp"
+        android:layout_marginTop="15dp"
+        />
+</LinearLayout>

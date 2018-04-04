@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar"/>
+
+    <TextView
+        android:id="@+id/tv_FAQ"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/view_background"
+        android:drawableRight="@drawable/ic_arrow_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/field_FAQ"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"/>
+
+    <include layout="@layout/common_cut_off_rule"/>
+
+    <TextView
+        android:id="@+id/tv_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/view_background"
+        android:drawableRight="@drawable/ic_arrow_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/field_feedback"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"/>
+
+    <include layout="@layout/common_cut_off_rule"/>
+
+    <TextView
+        android:id="@+id/tv_about"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/view_background"
+        android:drawableRight="@drawable/ic_arrow_right"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/field_about"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"/>
+
+</LinearLayout>

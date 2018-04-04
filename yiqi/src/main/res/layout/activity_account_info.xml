@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:app="http://schemas.android.com/apk/res-auto"
+			  xmlns:tools="http://schemas.android.com/tools"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:background="@color/bg_normal"
+			  android:orientation="vertical"
+			  tools:context=".feature.mine.view.RechargeActivity">
+
+	<LinearLayout android:layout_width="match_parent"
+				  android:paddingTop="20dp"
+				  android:gravity="center_horizontal"
+				  android:orientation="vertical"
+				  android:background="@drawable/user_withdraw_bg"
+				  android:layout_height="wrap_content">
+		<android.support.v7.widget.Toolbar
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:app="http://schemas.android.com/apk/res-auto"
+				android:id="@+id/toolbar"
+				android:layout_width="match_parent"
+				android:layout_height="44dp"
+				android:minHeight="44dp"
+				app:navigationIcon="@drawable/ic_navigation"
+				android:background="@color/transparent"
+				app:title="标题"
+
+				app:titleTextAppearance="@style/BaseToolbarTitleTextAppearance"
+				app:theme="@style/BaseToolbarTheme"
+				app:popupTheme="@style/BaseToolbarPopupMenuTheme">
+
+		</android.support.v7.widget.Toolbar>
+
+		android:layout_width="match_parent"
+		android:layout_height="150dp">
+		<TextView
+				android:id="@+id/tv_withdraw_money"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="8,000.00"
+				android:layout_marginTop="30dp"
+				android:textColor="@color/primary_comparison"
+				android:layout_centerInParent="true"
+				android:textSize="40sp"
+		/>
+		<TextView
+				android:layout_below="@+id/tv_withdraw_money"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="账户总额(元)"
+				android:layout_centerHorizontal="true"
+				android:textColor="#ffffffff"
+				android:textSize="12dp"
+		/>
+	</LinearLayout>
+	<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="70dp"
+			android:background="@color/primary_comparison">
+
+		<View
+				android:layout_width="1dp"
+				android:layout_height="40dp"
+				android:layout_centerInParent="true"
+				android:background="#ffdddddd"/>
+
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="horizontal">
+
+			<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:id="@+id/btn_user_recharge"
+					android:gravity="center_horizontal"
+					android:orientation="vertical">
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="8dp"
+						android:text="1000.00"
+						android:textColor="#ff111111"
+						android:textSize="20sp"/>
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="3dp"
+						android:text="可提现金额(元)"
+						android:textColor="@color/text_secondary"
+						android:textSize="12sp"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+					android:id="@+id/btn_user_withdraw"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:gravity="center_horizontal"
+					android:orientation="vertical">
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="8dp"
+						android:text="40.00"
+						android:textColor="#ff111111"
+						android:textSize="20sp"/>
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="3dp"
+						android:text="中彩收益(元)"
+						android:textColor="@color/text_secondary"
+						android:textSize="12sp"/>
+
+
+			</LinearLayout>
+
+		</LinearLayout>
+	</RelativeLayout>
+	<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:text="暂无明细记录"
+			android:layout_marginTop="98dp"
+			android:textColor="#ff999999"
+			android:textSize="15sp"
+	/>
+	<Button
+			android:id="@+id/btn_withdraw_wx"
+			android:layout_width="match_parent"
+			android:layout_marginLeft="12dp"
+			android:layout_marginTop="115dp"
+			android:text="立即购彩"
+			android:textSize="15sp"
+			android:textColor="@color/primary_comparison"
+			android:background="@drawable/common_primary_bg"
+			android:layout_marginRight="12dp"
+			android:layout_height="40dp"/>
+</LinearLayout>

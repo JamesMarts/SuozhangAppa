@@ -1,0 +1,221 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  xmlns:app="http://schemas.android.com/apk/res-auto"
+			  xmlns:tools="http://schemas.android.com/tools"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:orientation="vertical"
+			  android:background="@color/bg_normal"
+			  tools:context="com.yiqi.lottery.feature.find.view.FindFragment">
+
+	<!-- TODO: Update blank fragment layout -->
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="20dp"
+			android:background="@color/primary_highlight"></LinearLayout>
+
+	<TextView
+			android:layout_width="match_parent"
+			android:layout_height="44dp"
+			android:background="@color/primary_highlight"
+			android:gravity="center"
+
+			android:text="发现"
+			android:textColor="@color/primary_comparison"
+			android:textSize="18sp"/>
+
+	<RelativeLayout
+			android:id="@+id/btn_find_order_circle"
+			android:layout_width="match_parent"
+			android:layout_height="80dp"
+			android:background="@color/primary_comparison"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp">
+
+		<ImageView
+				android:id="@+id/iv_find_bi"
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:layout_centerVertical="true"
+				android:src="@drawable/icon_shaidanquan"/>
+
+		<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="20dp"
+				android:layout_toRightOf="@+id/iv_find_bi"
+				android:orientation="vertical">
+
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="晒单圈"
+					android:textColor="@color/text_primary"
+					android:textSize="15sp"/>
+
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="7dp"
+					android:text="晒晒来好运"
+					android:textColor="#ff333333"
+					android:textSize="13dp"/>
+
+		</LinearLayout>
+
+		<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/icon_faxian_gengduo"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+		/>
+	</RelativeLayout>
+	<RelativeLayout
+			android:id="@+id/btn_find_score_live"
+			android:layout_marginTop="10dp"
+			android:layout_width="match_parent"
+			android:layout_height="80dp"
+			android:background="@color/primary_comparison"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp">
+
+		<ImageView
+				android:id="@+id/iv_find_bifen"
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:layout_centerVertical="true"
+				android:src="@drawable/icon_bifenzhibo"/>
+
+		<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="20dp"
+				android:layout_toRightOf="@+id/iv_find_bifen"
+				android:orientation="vertical">
+
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="比分直播"
+					android:textColor="@color/text_primary"
+					android:textSize="15sp"/>
+
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="7dp"
+					android:text="直播精彩有你来"
+					android:textColor="#ff333333"
+					android:textSize="13dp"/>
+
+		</LinearLayout>
+
+		<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/icon_faxian_gengduo"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+		/>
+	</RelativeLayout>
+	<RelativeLayout
+			android:id="@+id/btn_find_game_analysis"
+			android:layout_marginTop="10dp"
+			android:layout_width="match_parent"
+			android:layout_height="80dp"
+			android:background="@color/primary_comparison"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp">
+
+		<ImageView
+				android:id="@+id/iv_find_bisanfenxi"
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:layout_centerVertical="true"
+				android:src="@drawable/icon_bisaifenxi"/>
+
+		<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="20dp"
+				android:layout_toRightOf="@+id/iv_find_bisanfenxi"
+				android:orientation="vertical">
+
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="比赛分析"
+					android:textColor="@color/text_primary"
+					android:textSize="15sp"/>
+
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="7dp"
+					android:text="回顾赛事精彩点"
+					android:textColor="#ff333333"
+					android:textSize="13dp"/>
+
+		</LinearLayout>
+
+		<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/icon_faxian_gengduo"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+		/>
+	</RelativeLayout>
+	<RelativeLayout
+			android:id="@+id/btn_find_lottery_results"
+			android:layout_marginTop="10dp"
+			android:layout_width="match_parent"
+			android:layout_height="80dp"
+			android:background="@color/primary_comparison"
+			android:paddingLeft="15dp"
+			android:paddingRight="15dp">
+
+		<ImageView
+				android:id="@+id/iv_find_shai"
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:layout_centerVertical="true"
+				android:src="@drawable/icon_kaijiangjieguo"/>
+
+		<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="20dp"
+				android:layout_toRightOf="@+id/iv_find_shai"
+				android:orientation="vertical">
+
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="开奖结果"
+					android:textColor="@color/text_primary"
+					android:textSize="15sp"/>
+
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="7dp"
+					android:text="大奖等着你"
+					android:textColor="#ff333333"
+					android:textSize="13dp"/>
+
+		</LinearLayout>
+
+		<ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/icon_faxian_gengduo"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+		/>
+	</RelativeLayout>
+</LinearLayout>

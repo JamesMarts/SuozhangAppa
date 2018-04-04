@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/view_dd">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp"
+                android:background="@drawable/bg_life_bills_detail"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center_horizontal"
+                    android:text="房租收费单"
+                    android:textColor="@color/text_primary"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="租户 ："
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_bill_people_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_horizontal"
+                        android:text=""
+                        android:textColor="@color/text_secondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="房间 ："
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_bill_room_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_horizontal"
+                        android:text=""
+                        android:textColor="@color/text_secondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="日期 ："
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_bill_room_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_horizontal"
+                        android:text=""
+                        android:textColor="@color/text_secondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="27dp"
+                    android:background="@drawable/bg_dotted_line"
+                    android:layerType="software" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="项目费用"
+                        android:textColor="@color/primary_highlight"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_horizontal"
+                        android:text="金额"
+                        android:textColor="@color/primary_highlight"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_billing_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:focusable="false"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_dotted_line"
+                    android:layerType="software" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="合计"
+                        android:textColor="@color/primary_highlight"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="￥"
+                            android:textColor="@color/text_remind"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_bill_pay_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_remind"
+                            android:textSize="23sp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <include layout="@layout/common_cut_match_rule" />
+
+                <LinearLayout
+                    android:id="@+id/view_refused_reason"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary_comparison"
+                    android:focusable="true"
+
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_null"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingTop="15dp"
+                        android:text="拒绝理由"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/edt_refused_reason"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/bg_repair_date_mormal"
+                        android:gravity="top"
+                        android:hint="请输入对本合同的疑问..."
+                        android:lines="6"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="12dp"
+                        android:scrollbars="vertical"
+                        android:text=""
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_secondary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/view_dd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/view_buttom"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+
+                android:background="@color/primary_comparison"
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <ImageButton
+                    android:id="@+id/btn_to_call_phone"
+                    android:layout_width="45dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/bg_report_edittext"
+                    android:src="@drawable/ic_life_call_phone" />
+
+                <TextView
+                    android:id="@+id/btn_to_doubt"
+                    android:layout_width="131dp"
+                    android:layout_height="33dp"
+
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/bg_report_edittext"
+                    android:gravity="center"
+                    android:text="我有疑问"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/btn_to_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/primary_highlight"
+                    android:gravity="center"
+                    android:text="支付"
+                    android:textColor="@color/primary_comparison"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btn_refused_reason"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:background="@color/primary_highlight"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="@color/primary_comparison"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
+
+

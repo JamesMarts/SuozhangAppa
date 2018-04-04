@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2017. 深圳掌控网络有限公司. All rights reserved.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/primary_comparison"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:drawablePadding="15dp"
+                android:text="清除缓存"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/bt_userinfo_data"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="35dp"
+                android:drawableRight="@drawable/ic_clean"
+                android:gravity="center_vertical"
+                android:paddingLeft="60dp"
+                android:text=""
+                android:textColor="@color/text_secondary"
+                android:textSize="15sp" />
+            >
+
+        </RelativeLayout>
+
+        <include layout="@layout/common_cut_match_rule" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawablePadding="15dp"
+                android:text="通知提醒"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp" />
+
+            <ToggleButton
+                android:id="@+id/tg_is_add_contact"
+                android:layout_width="46dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/toggle_contact"
+                android:button="@null"
+                android:checked="false"
+                android:textOff=""
+                android:textOn="" />
+            >
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_login_out"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/dialog_button"
+        android:text="退出登录"
+        android:textColor="@color/primary_comparison"
+        android:textSize="18sp" />
+</LinearLayout>
