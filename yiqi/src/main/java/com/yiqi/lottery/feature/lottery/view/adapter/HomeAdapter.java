@@ -4,7 +4,7 @@ import android.content.Context;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
-
+import butterknife.OnClick;
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.sunfusheng.marqueeview.MarqueeView;
@@ -47,18 +47,66 @@ public class HomeAdapter extends BaseMultiItemQuickAdapter<MultipleItem, BaseVie
                 break;
             case MultipleItem.ITEM_MSG:
                 marqueeView = helper.getView(R.id.marqueeView);
-
-                List<String> info = new ArrayList<>();
-                info.add("信息：恭喜[刘德华]投注双色球中奖5.0元");
-                info.add("信息：恭喜[渣渣辉]投注双色球中奖20.0元");
-                info.add("信息：恭喜[古天乐]投注双色球中奖300.0元");
-                info.add("信息：恭喜[陈小春]投注双色球中奖20.0元");
-                info.add("信息：恭喜[周吉伦]投注双色球中奖10.0元");
-                marqueeView.startWithList(info);
+                marqueeView.startWithList(DataServer.getMsgData());
 
                 break;
             case MultipleItem.ITEM_TYPE:
                 AM.image().bind(DataServer.AD_URL, helper.getView(R.id.iv_lottery_ad));
+                helper.getView(R.id.btn_lottery_kaijiang).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                });
+                helper.getView(R.id.btn_lottery_bifen).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                });
+                helper.getView(R.id.btn_lottery_gendan).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                });
+                helper.getView(R.id.btn_lottery_zuqiu).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                });
+                helper.getView(R.id.btn_lottery_lanqiu).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                });
+                helper.getView(R.id.btn_lottery_shenfu).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                });
+                helper.getView(R.id.btn_lottery_jinqiu).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                });
+                helper.getView(R.id.btn_lottery_renxuan).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                });
+                helper.getView(R.id.btn_lottery_liudian).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                });
+
                 break;
             case MultipleItem.ITEM_WINNING_COLUMN:
                 AM.image().bindToCircleObject(DataServer.WIN, helper.getView(R.id.iv_lottery_focus_events_win));

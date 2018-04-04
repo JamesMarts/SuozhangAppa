@@ -19,4 +19,15 @@ public class DataServer {
         strings.add("http://public.zgzcw.com/d/images/2018431522718720789_715.jpg");
         return strings;
     }
+
+    public static  List<String> getMsgData(){
+
+        List<String> info = new ArrayList<>();
+        info.add("信息：恭喜[刘德华]投注双色球中奖5.0元");
+        info.add("信息：恭喜[渣渣辉]投注双色球中奖20.0元");
+        info.add("信息：恭喜[古天乐]投注双色球中奖300.0元");
+        info.add("信息：恭喜[陈小春]投注双色球中奖20.0元");
+        info.add("信息：恭喜[周吉伦]投注双色球中奖10.0元");
+        return info;
+    }
 }

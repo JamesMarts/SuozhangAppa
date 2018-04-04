@@ -16,6 +16,7 @@
 	>
 
 		<TextView
+				android:id="@+id/btn_lottery_kaijiang"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_centerVertical="true"
@@ -29,6 +30,7 @@
 		/>
 
 		<TextView
+				android:id="@+id/btn_lottery_bifen"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_centerInParent="true"
@@ -43,6 +45,7 @@
 		/>
 
 		<TextView
+				android:id="@+id/btn_lottery_gendan"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_alignParentRight="true"
@@ -71,6 +74,7 @@
 			android:paddingTop="14dp">
 
 		<TextView
+				android:id="@+id/btn_lottery_zuqiu"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_centerVertical="true"
@@ -85,6 +89,7 @@
 
 
 		<TextView
+				android:id="@+id/btn_lottery_lanqiu"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_alignParentRight="true"
@@ -114,6 +119,7 @@
 	>
 
 		<TextView
+				android:id="@+id/btn_lottery_shenfu"
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_weight="1"
@@ -127,6 +133,7 @@
 		/>
 
 		<TextView
+				android:id="@+id/btn_lottery_jinqiu"
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_centerInParent="true"
@@ -141,6 +148,7 @@
 		/>
 
 		<TextView
+				android:id="@+id/btn_lottery_renxuan"
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_alignParentRight="true"
@@ -155,6 +163,7 @@
 		/>
 
 		<TextView
+				android:id="@+id/btn_lottery_liudian"
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_alignParentRight="true"

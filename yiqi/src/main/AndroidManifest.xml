@@ -41,6 +41,8 @@
 		<activity android:name=".feature.documentary.view.adapter.LotteryDetailActivity"/>
 		<activity android:name=".feature.find.view.OrderShareCircleActivity">
 		</activity>
+		<activity android:name=".feature.find.view.WriteCircleActivity">
+		</activity>
 	</application>
 
 </manifest>
