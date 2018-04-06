@@ -1,80 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-				xmlns:app="http://schemas.android.com/apk/res-auto"
-				android:layout_width="match_parent"
-				android:layout_height="match_parent"
-				android:background="@color/bg_normal">
-	<include layout="@layout/include_toolbar"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_normal"
+    android:orientation="vertical">
 
-	<FrameLayout
-			android:id="@+id/fl_container"
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
+    <include layout="@layout/include_toolbar" />
 
-			android:layout_above="@+id/line"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/primary_comparison"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp">
 
-	<View xmlns:android="http://schemas.android.com/apk/res/android"
-		  android:id="@+id/line"
-		  android:layout_width="match_parent"
-		  android:layout_height="0.4dp"
-		  android:layout_above="@+id/radiogroup"
-		  android:background="#c3c3c3">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:button="@null"
+            android:checked="true"
+            android:paddingRight="25dp"
+            android:drawableLeft="@drawable/icon_jinghua"
+            android:drawablePadding="5dp"
+            android:text="精华"
+            android:textColor="@drawable/find_circle_like_text_bg"
+            android:textSize="13sp" />
 
-	</View>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="25dp"
+            android:background="@color/transparent"
+            android:button="@null"
+            android:paddingRight="25dp"
 
-	<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-				android:id="@+id/radiogroup"
-				android:layout_width="match_parent"
-				android:layout_height="49dp"
-				android:layout_alignParentBottom="true"
-				android:background="@color/primary_comparison"
-				android:gravity="center_vertical"
-				android:orientation="horizontal">
+            android:drawablePadding="5dp"
+            android:text="全部"
+            android:textColor="@drawable/find_circle_like_text_bg"
+            android:textSize="13sp" />
 
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:background="@color/transparent"
+            android:button="@null"
 
-		<RadioButton
-				android:id="@+id/rb_home_lottery"
-				android:layout_width="0dp"
-				android:layout_height="wrap_content"
-				android:layout_weight="1"
-				android:button="@null"
-				android:checked="true"
-				android:drawablePadding="3dp"
-				android:drawableTop="@drawable/find_circle_list"
-				android:gravity="center_horizontal"
-				android:text="晒单圈"
-				android:textColor="@drawable/main_buttom_bar_text_color"
-				android:textSize="11sp"/>
+            android:drawablePadding="5dp"
+            android:text="我的"
+            android:textColor="@drawable/find_circle_like_text_bg"
+            android:textSize="13sp" />
 
-		<RadioButton
-				android:id="@+id/rb_home_documentary"
-				android:layout_width="0dp"
-				android:layout_height="wrap_content"
-				android:layout_weight="1"
-				android:button="@null"
-				android:checked="false"
-				android:drawablePadding="3dp"
-				android:drawableTop="@drawable/find_circle_write"
-				android:gravity="center_horizontal"
-				android:text="我要晒单"
-				android:textColor="@drawable/main_buttom_bar_text_color"
-				android:textSize="11sp"/>
+    </RadioGroup>
 
-		<RadioButton
-				android:id="@+id/rb_home_find"
-				android:layout_width="0dp"
-				android:layout_height="wrap_content"
-				android:layout_weight="1"
-				android:button="@null"
-				android:checked="false"
-				android:drawablePadding="3dp"
-				android:drawableTop="@drawable/find_circle_mine"
-				android:gravity="center_horizontal"
-				android:text="我"
-				android:textColor="@drawable/main_buttom_bar_text_color"
-				android:textSize="11sp"/>
+    <include layout="@layout/common_cut_match_rule" />
 
-
-	</RadioGroup>
-
-</RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_find_circle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

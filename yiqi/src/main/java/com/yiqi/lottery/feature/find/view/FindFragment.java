@@ -15,7 +15,6 @@ import com.yiqi.lottery.R;
 public class FindFragment extends BaseFragment {
 
 
-    Unbinder unbinder;
 
     @Override
     public int attachLayoutRes() {
