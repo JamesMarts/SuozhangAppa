@@ -8,29 +8,35 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.suozhang.framework.component.recyclerview.DividerItemDecoration;
 import com.suozhang.framework.framework.BaseActivity;
-import com.suozhang.framework.utils.T;
 import com.yiqi.lottery.R;
-import com.yiqi.lottery.entity.bo.BeetingBo;
 import com.yiqi.lottery.entity.bo.CircleBo;
 import com.yiqi.lottery.feature.find.view.adapter.CircleAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
-public class OrderShareCircleActivity extends BaseActivity implements BaseQuickAdapter.OnItemClickListener, Toolbar.OnMenuItemClickListener {
+public class OrderShareCircleActivity extends BaseActivity implements BaseQuickAdapter.OnItemClickListener, Toolbar.OnMenuItemClickListener, RadioGroup.OnCheckedChangeListener {
 
 
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
     @BindView(R.id.rv_find_circle)
     RecyclerView mRvFindCircle;
+    @BindView(R.id.rgb_find_circle_jinhua)
+    RadioButton mRgbFindCircleJinhua;
+    @BindView(R.id.rgb_find_circle_all)
+    RadioButton mRgbFindCircleAll;
+    @BindView(R.id.rgb_find_circle_my)
+    RadioButton mRgbFindCircleMy;
+    @BindView(R.id.rgp_find_circle)
+    RadioGroup mRgpFindCircle;
     private CircleAdapter mAdapter;
 
     @Override
@@ -86,13 +92,29 @@ public class OrderShareCircleActivity extends BaseActivity implements BaseQuickA
     }
 
     @Override
+    protected void initEvent() {
+        mRgpFindCircle.setOnCheckedChangeListener(this);
+    }
+
+    @Override
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_add:
-               startActivity(new Intent(this,WriteCircleActivity.class));
+                startActivity(new Intent(this, WriteCircleActivity.class));
                 break;
         }
         return true;
 
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        if (checkedId == R.id.rgb_find_circle_all) {
+            mRgbFindCircleJinhua.setTextColor(getResources().getColor(R.color.text_primary));
+        } else if (checkedId == R.id.rgb_find_circle_my) {
+            mRgbFindCircleJinhua.setTextColor(getResources().getColor(R.color.text_primary));
+        } else if (checkedId == R.id.rgb_find_circle_jinhua) {
+            mRgbFindCircleJinhua.setTextColor(getResources().getColor(R.color.primary_highlight));
+        }
     }
 }

@@ -43,6 +43,14 @@
 		</activity>
 		<activity android:name=".feature.find.view.WriteCircleActivity">
 		</activity>
+		<activity android:name=".feature.find.view.ScoreLiveActivity">
+		</activity>
+		<activity android:name=".feature.find.view.GameAnalysisActivity">
+		</activity>
+		<activity android:name=".feature.find.view.LotteryResultsActivity">
+		</activity>
+		<activity android:name=".feature.find.view.ResultViewActivity">
+		</activity>
 	</application>
 
 </manifest>

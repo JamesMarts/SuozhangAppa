@@ -9,19 +9,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.luck.picture.lib.PictureSelector;
-import com.luck.picture.lib.config.PictureConfig;
-import com.luck.picture.lib.config.PictureMimeType;
-import com.luck.picture.lib.entity.LocalMedia;
 import com.suozhang.framework.framework.BaseActivity;
 import com.suozhang.framework.utils.logger.Logger;
 import com.yiqi.lottery.R;
+
+import com.luck.picture.lib.config.PictureConfig;
 import com.yiqi.lottery.common.widget.util.FullyGridLayoutManager;
 import com.yiqi.lottery.feature.find.view.adapter.GridImageAdapter;
-
+import  com.luck.picture.lib.PictureSelector;
+import  com.luck.picture.lib.config.PictureMimeType;
 import java.util.ArrayList;
 import java.util.List;
-
+import com.luck.picture.lib.entity.LocalMedia;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -37,7 +36,7 @@ public class WriteCircleActivity extends BaseActivity implements Toolbar.OnMenuI
     private int themeId;
 
     private int maxSelectNum = 5;// 图片最大可选数量
-    private List<LocalMedia> selectList = new ArrayList<>();
+    private List<com.luck.picture.lib.entity.LocalMedia> selectList = new ArrayList<>();
 
     List<String> file = new ArrayList<>();
     @Override
@@ -90,7 +89,7 @@ public class WriteCircleActivity extends BaseActivity implements Toolbar.OnMenuI
                    switch (mediaType) {
                        case 1:
                            // 预览图片 可自定长按保存路径
-                           PictureSelector.create(WriteCircleActivity.this).externalPicturePreview(position, selectList);
+                           com.luck.picture.lib.PictureSelector.create(WriteCircleActivity.this).externalPicturePreview(position, selectList);
                            break;
 
                    }
@@ -104,13 +103,13 @@ public class WriteCircleActivity extends BaseActivity implements Toolbar.OnMenuI
         @Override
         public void onAddPicClick() {
 // 进入相册 以下是例子：用不到的api可以不写
-            PictureSelector.create(WriteCircleActivity.this)
+         PictureSelector.create(WriteCircleActivity.this)
                     .openGallery(PictureMimeType.ofImage())//全部.PictureMimeType.ofAll()、图片.ofImage()、视频.ofVideo()、音频.ofAudio()
                     .theme(themeId)//主题样式(不设置为默认样式) 也可参考demo values/styles下 例如：R.style.picture.white.style
                     .maxSelectNum(5)// 最大图片选择数量 int
                     .minSelectNum(1)// 最小选择数量 int
                     .imageSpanCount(4)// 每行显示个数 int
-                    .selectionMode(PictureConfig.MULTIPLE)// 多选 or 单选 PictureConfig.MULTIPLE or PictureConfig.SINGLE
+                    .selectionMode(com.luck.picture.lib.config.PictureConfig.MULTIPLE)// 多选 or 单选 PictureConfig.MULTIPLE or PictureConfig.SINGLE
                     .previewImage(true)// 是否可预览图片 true or false
                     .isCamera(true)// 是否显示拍照按钮 true or false
                     .imageFormat(PictureMimeType.JPEG)// 拍照保存图片格式后缀,默认jpeg

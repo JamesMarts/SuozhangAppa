@@ -35,7 +35,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@+id/btn_gendan"
-            android:src="@drawable/icon_xiala" />
+            android:src="@drawable/icon_xiala2" />
 
         <TextView
             android:id="@+id/btn_my_foucs"

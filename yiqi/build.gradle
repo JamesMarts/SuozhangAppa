@@ -124,7 +124,7 @@ dependencies {
     implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-1'
     implementation 'com.sunfusheng:marqueeview:1.1.0'
-      //图片选择库
+    //图片选择库
     implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.2'
 }
 // 依赖tinker插件脚本

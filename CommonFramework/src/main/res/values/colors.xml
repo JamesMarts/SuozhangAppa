@@ -13,6 +13,8 @@
 
     <!--主颜色，用于导航栏，状态栏背景及突出文字、按钮、图标等-->
     <color name="primary_highlight">#D83200</color>
+
+    <color name="bg_check">#a82700</color>
     <!--对比色，使用主颜色时，用于文字的颜色-->
     <color name="primary_comparison">#ffffff</color>
     <!--对比色，使用主颜色时，用于文字的颜色-->

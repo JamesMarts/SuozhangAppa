@@ -44,10 +44,13 @@ public class FindFragment extends BaseFragment {
                 startActivity(new Intent(getActivity(), OrderShareCircleActivity.class));
                 break;
             case R.id.btn_find_score_live:
+                startActivity(new Intent(getActivity(), ScoreLiveActivity.class));
                 break;
             case R.id.btn_find_game_analysis:
+                startActivity(new Intent(getActivity(), GameAnalysisActivity.class));
                 break;
             case R.id.btn_find_lottery_results:
+                startActivity(new Intent(getActivity(), LotteryResultsActivity.class));
                 break;
         }
     }

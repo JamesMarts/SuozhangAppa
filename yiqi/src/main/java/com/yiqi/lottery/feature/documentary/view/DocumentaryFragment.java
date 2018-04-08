@@ -126,7 +126,7 @@ public class DocumentaryFragment extends BaseFragment {
         if (b) {
             imgXiala.setImageResource(R.drawable.icon_shouqi);
         } else {
-            imgXiala.setImageResource(R.drawable.icon_xiala);
+            imgXiala.setImageResource(R.drawable.icon_xiala2);
         }
     }
 

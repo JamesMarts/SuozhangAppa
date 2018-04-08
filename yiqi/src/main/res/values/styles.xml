@@ -19,6 +19,9 @@
     <style name="TabLayoutTextStyle">
         <item name="android:textSize">13sp</item>
     </style>
+    <style name="TabLayoutTextStyle2">
+        <item name="android:textSize">15sp</item>
+    </style>
       <!-- PopupWindow左右弹出的效果 -->
     <style name="AnimationFade">
         <item name="android:windowEnterAnimation">@anim/inputodown</item>

@@ -25,7 +25,7 @@
 			android:textColor="@color/text_primary"
 			app:funcType="canClear"
 			android:paddingRight="12dp"
-			android:textColorHint="#999999"
+			android:textColorHint="@color/text_999999"
 	/>
 	<com.suozhang.framework.widget.PowerfulEditText
 			android:layout_width="wrap_content"
@@ -63,9 +63,10 @@
 				android:maxLength="11"
 				android:textColor="@color/text_primary"
 				android:paddingRight="50dp"
-				android:textColorHint="#999999"
+				android:textColorHint="@color/text_999999"
 		/>
 		<ImageView
+				android:id="@+id/btn_user_register_scan"
 				android:layout_width="wrap_content"
 				android:layout_height="match_parent"
 				android:gravity="center_vertical"
@@ -98,7 +99,7 @@
 				android:textColor="@color/text_primary"
 				app:funcType="canClear"
 				android:paddingRight="50dp"
-				android:textColorHint="#999999"
+				android:textColorHint="@color/text_999999"
 		/>
 		<TextView
 				android:layout_width="wrap_content"
@@ -129,11 +130,11 @@
 			android:textColor="@color/text_primary"
 			app:funcType="canClear"
 			android:paddingRight="12dp"
-			android:textColorHint="#999999"
+			android:textColorHint="@color/text_999999"
 	/>
 	q
 	<Button
-			android:id="@+id/btn_user_login"
+			android:id="@+id/btn_user_register"
 			android:layout_width="wrap_content"
 			android:layout_marginTop="50dp"
 			android:text="注册"
@@ -143,10 +144,11 @@
 			android:layout_height="40dp"/>
 	<TextView
 			android:layout_width="match_parent"
+			android:id="@+id/btn_user_register_had_account"
 			android:layout_height="wrap_content"
 			android:text="已有账号>"
 			android:paddingLeft="53dp"
-			android:layout_marginTop="25dp"
+			android:paddingTop="25dp"
 			android:textColor="@color/primary_highlight"
 			android:textSize="13sp"
 	/>
