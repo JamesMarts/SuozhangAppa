@@ -30,4 +30,16 @@ public class DataServer {
         info.add("信息：恭喜[周吉伦]投注双色球中奖10.0元");
         return info;
     }
+
+    public static  List<String> getImgData(){
+
+        List<String> info = new ArrayList<>();
+        info.add("http://qcloud.dpfile.com/pc/VeIdNYGpeErIPYjgHZ93Hsz8ac4a2zqkZb-qz0skZmnYLSH6j7Kw12dPmORZ5nWX.jpg");
+        info.add("http://qcloud.dpfile.com/pc/2sVTtA-b8p28YQ0K7EbJlw2tkZGqA9TW8odeUXE0jUKc4IoerzVTwqFERZvpNU16.jpg");
+        info.add("http://qcloud.dpfile.com/pc/9EPPcogcailC5krezDmFerCyths6-1MxmFX-IJHRFYGC9lhWCEf2Hw4aNbyJalxN.jpg");
+        info.add("http://qcloud.dpfile.com/pc/mjsLdN1qFqYaI6QIDsbl3Gd17fkEAFgJn9f-wkMcMEszY6IFjHSVWQsbaEtJGaQe.jpg");
+        info.add("http://qcloud.dpfile.com/pc/mjsLdN1qFqYaI6QIDsbl3Gd17fkEAFgJn9f-wkMcMEszY6IFjHSVWQsbaEtJGaQe.jpg");
+//        info.add("");
+        return info;
+    }
 }
